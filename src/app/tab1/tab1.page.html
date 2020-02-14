@@ -1,17 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Reminder
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-button expend="full" (click)="Assignment()">Assignment</ion-button>  
+  <ion-button expend="full" (click)="Tutorial()">Tutorial</ion-button>
+  <ion-button expend="full" (click)="Quiz()">Quiz</ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card class="card-design" *ngFor="let card of items">
+    <ion-card-header>
+      <ion-card-subtitle>{{card.title}}</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="calendar" class="icon-design"></ion-icon>
+        <ion-label class="label-design">{{card.date}}</ion-label>
+        <ion-icon name="alarm" class="icon-design"></ion-icon>
+        <ion-label class="label-design">{{card.time}}</ion-label>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>

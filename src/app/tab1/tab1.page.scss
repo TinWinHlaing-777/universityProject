@@ -1,3 +1,16 @@
-ion-content ion-toolbar {
-  --background: translucent;
+.card-design{
+  background-color:hsl(0, 0%, 93%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); 
+}
+.icon-design{
+  color:#64b5f6;
+  width: 20px;
+  height: 20px;
+  margin: -3px;
+  margin-right:10px;
+
+}
+.label-design{
+  font-size: 18px;
+  margin-right:10px;
 }
